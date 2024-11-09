@@ -12,7 +12,7 @@ require '../controllers/ingresosController.php';
 use App\controllers\IngresosController;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Datos del formulario
+   
     $datos = [
         'codigoEstudiante' => $_POST['codigoEstudiante'],
         'nombreEstudiante' => $_POST['nombreEstudiante'],
@@ -23,12 +23,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'idSala' => $_POST['idSala']
     ];
 
-    // Instanciamos el controlador y llamamos al método newIngreso
+    
     $controller = new IngresosController();
     $controller->newIngreso($datos);
 
-    // Redirigir o mostrar mensaje de éxito
-    header("Location: index.php?mensaje=Ingreso registrado con éxito.");
+    
+    header("Location: inicio.php?mensaje=Ingreso registrado con éxito.");
     exit;
 }
 ?>

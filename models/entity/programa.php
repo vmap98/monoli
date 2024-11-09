@@ -15,7 +15,7 @@ class Programa
         $this->nombre = $nombre;
     }
 
-    // Getter y setter para $id
+    
     public function getId()
     {
         return $this->id;
@@ -26,7 +26,7 @@ class Programa
         $this->id = $id;
     }
 
-    // Getter y setter para $nombre
+   
     public function getNombre()
     {
         return $this->nombre;

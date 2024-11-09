@@ -36,7 +36,7 @@ class IngresosQuery {
         return "DELETE FROM ingresos WHERE id=$id";
     }
 
-    // Nueva función para obtener los programas
+    
     static function getProgramas() {
         return "SELECT id, nombre FROM programas";
     }

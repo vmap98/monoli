@@ -18,7 +18,7 @@ $idPrograma = '';
 $fechaIngreso = '';
 $idSala = '';
 $idResponsable = '';
-$horaIngreso = ''; // Inicializa la variable horaIngreso
+$horaIngreso = ''; 
 
 if (!empty($_GET['id'])) {
     $controller = new IngresosController();
@@ -38,42 +38,40 @@ if (!empty($_GET['id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo htmlspecialchars($titulo); ?></title>
+    <title>Registrar ingreso</title>
+    <link rel="stylesheet" href="../public/css/estilos.css">
 </head>
 <body>
-    <h1><?php echo htmlspecialchars($titulo); ?></h1>
+    <h1>Registrar ingreso</h1>
     <section>
         <form action="confirmarIngreso.php" method="post">
-            <?php if (!empty($_GET['id'])): ?>
-                <input type="hidden" name="id" value="<?php echo htmlspecialchars($_GET['id']); ?>">
-            <?php endif; ?>
             <div>
                 <label for="codigoEstudiante">Código del Estudiante:</label>
-                <input type="text" id="codigoEstudiante" name="codigoEstudiante" value="<?php echo htmlspecialchars($codigoEstudiante); ?>" required>
+                <input type="text" id="codigoEstudiante" name="codigoEstudiante" value="" required>
             </div>
             <div>
                 <label for="nombreEstudiante">Nombre del Estudiante:</label>
-                <input type="text" id="nombreEstudiante" name="nombreEstudiante" value="<?php echo htmlspecialchars($nombreEstudiante); ?>" required>
+                <input type="text" id="nombreEstudiante" name="nombreEstudiante" value="" required>
             </div>
             <div>
                 <label for="idPrograma">Programa:</label>
-                <input type="text" id="idPrograma" name="idPrograma" value="<?php echo htmlspecialchars($idPrograma); ?>" required>
+                <input type="text" id="idPrograma" name="idPrograma" value="" required>
             </div>
             <div>
                 <label for="fechaIngreso">Fecha y Hora de Ingreso:</label>
-                <input type="datetime-local" id="fechaIngreso" name="fechaIngreso" value="<?php echo htmlspecialchars($fechaIngreso); ?>" required>
+                <input type="datetime-local" id="fechaIngreso" name="fechaIngreso" value="" required>
             </div>
             <div>
                 <label for="horaIngreso">Hora de Ingreso:</label>
-                <input type="time" id="horaIngreso" name="horaIngreso" value="<?php echo htmlspecialchars($horaIngreso); ?>" required>
+                <input type="time" id="horaIngreso" name="horaIngreso" value="" required>
             </div>
             <div>
                 <label for="idSala">Sala:</label>
-                <input type="text" id="idSala" name="idSala" value="<?php echo htmlspecialchars($idSala); ?>" required>
+                <input type="text" id="idSala" name="idSala" value="" required>
             </div>
             <div>
                 <label for="idResponsable">Responsable:</label>
-                <input type="text" id="idResponsable" name="idResponsable" value="<?php echo htmlspecialchars($idResponsable); ?>" required>
+                <input type="text" id="idResponsable" name="idResponsable" value="" required>
             </div>
             <div>
                 <button type="submit">Guardar</button>
