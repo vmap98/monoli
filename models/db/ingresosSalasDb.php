@@ -10,7 +10,7 @@ class IngresoSalas
     private $user = 'root';
     private $pwd = '';
     private $name = 'ingresos_salas_db';
-    private $conex;
+    public $conex;
 
     function __construct()
     {

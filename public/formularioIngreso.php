@@ -29,7 +29,7 @@ if (!empty($_GET['id'])) {
     $fechaIngreso = $ingreso->get('fechaIngreso');
     $idSala = $ingreso->get('idSala');
     $idResponsable = $ingreso->get('idResponsable');
-    $horaIngreso = $ingreso->get('horaIngreso');  // Asigna el valor de horaIngreso si existe
+    $horaIngreso = $ingreso->get('horaIngreso');  
 }
 ?>
 
@@ -58,8 +58,8 @@ if (!empty($_GET['id'])) {
                 <input type="text" id="idPrograma" name="idPrograma" value="" required>
             </div>
             <div>
-                <label for="fechaIngreso">Fecha y Hora de Ingreso:</label>
-                <input type="datetime-local" id="fechaIngreso" name="fechaIngreso" value="" required>
+                <label for="fechaIngreso">Fecha:</label>
+                <input type="date" id="fechaIngreso" name="fechaIngreso" value="" required>
             </div>
             <div>
                 <label for="horaIngreso">Hora de Ingreso:</label>

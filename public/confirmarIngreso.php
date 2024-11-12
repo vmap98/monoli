@@ -8,6 +8,7 @@ require '../models/db/ingresosSalasDb.php';
 require '../models/queries/ingresosQuery.php';
 require '../models/entity/ingresos.php';
 require '../controllers/ingresosController.php';
+require '../views/IngresosView.php';
 
 use App\controllers\IngresosController;
 
