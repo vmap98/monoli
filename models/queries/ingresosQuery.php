@@ -3,7 +3,7 @@ namespace App\models\queries;
 
 class IngresosQuery {
     
-  
+    
     public static function getIngresosPorRangoFechas($fechaInicio, $fechaFin) {
         return "SELECT ingresos.id, ingresos.codigoEstudiante, ingresos.nombreEstudiante, programas.nombre AS programa, ingresos.fechaIngreso, ingresos.horaIngreso
                 FROM ingresos

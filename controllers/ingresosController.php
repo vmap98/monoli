@@ -12,11 +12,10 @@ class IngresosController {
     }
 
     function newIngreso($datos){
-       
+        
         $fechaIngreso = new \DateTime($datos['fechaIngreso']);
         $horaIngreso = new \DateTime($datos['horaIngreso']);
     
-        
         $diaSemana = $fechaIngreso->format('w');
         $hora = $horaIngreso->format('H:i'); 
 
@@ -74,3 +73,4 @@ class IngresosController {
         return $programasQuery->all();  
     }
 }
+?>

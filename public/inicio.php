@@ -8,10 +8,10 @@ $fechaInicio = isset($_GET['fechaInicio']) ? $_GET['fechaInicio'] : null;
 $fechaFin = isset($_GET['fechaFin']) ? $_GET['fechaFin'] : null;
 
 if ($fechaInicio && $fechaFin) {
-    
+   
     $query = \App\models\queries\IngresosQuery::getIngresosPorRangoFechas($fechaInicio, $fechaFin);
 } else {
-    
+   
     $query = \App\models\queries\IngresosQuery::getIngresosDelDia();
 }
 
@@ -142,7 +142,7 @@ $database->close();
         <?php endif; ?>
     </section>
 
-    
+   
     <section>
         <h2>Consultar Ingresos por Rango de Fechas</h2>
         <form action="inicio.php" method="get">

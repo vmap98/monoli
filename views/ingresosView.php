@@ -33,10 +33,11 @@ class IngresosView {
             $html .= '<td>' . $ingreso->get('id') . '</td>';
             $html .= '<td>' . $ingreso->get('codigoEstudiante') . '</td>';
             $html .= '<td>' . $ingreso->get('nombreEstudiante') . '</td>';
-            $html .= '<td>' . $ingreso->get('idPrograma') . '</td>';
+            
+            $html .= '<td>' . $ingreso->get('programaNombre') . '</td>';  
             $html .= '<td>' . $ingreso->get('fechaIngreso') . '</td>';
-            $html .= '<td>' . $ingreso->get('idSala') . '</td>';
-            $html .= '<td>' . $ingreso->get('idResponsable') . '</td>';
+            $html .= '<td>' . $ingreso->get('salaNombre') . '</td>';  
+            $html .= '<td>' . $ingreso->get('responsableNombre') . '</td>';  
             $html .= '<td>';
             $html .= '<a href="formularioIngreso.php?id=' . $ingreso->get('id') . '">Modificar</a>';
             $html .= '<button class="borrar" data-id="' . $ingreso->get('id') . '">Borrar</button>';
@@ -48,4 +49,3 @@ class IngresosView {
         return $html;
     }
 }
-?>
